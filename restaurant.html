@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Vanilla Lounge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <header>
+        <h1 style="color: #FFCF40; text-shadow: 2px 2px #000;">Vanilla Lounge</h1>
+        <nav>
+            <a href="https://wolt.com/ru/kaz/almaty?srsltid=AfmBOoprvsW93nMBmiOskh80196iRVtqv8gDa0C6H1XirQksPVKXCEhd">Доставка</a>
+            <a href="https://2gis.kz/almaty/firm/70000001033286697">Адрес</a>
+            <a href="https://restoran.kz/coffee/90582-vanilla-na-kunaeva">О Ресторане</a>
+            <a href="https://wa.me/77715565607">Контакты</a>
+            <a href="delivery.html">Столы бронирования</a>
+            <div class="dropdown-container">
+            <form>
+                <select name="city" id="city-select">
+                  <option value="">Выберите город</option>
+                  <option value="astana">Астана</option>
+                  <option value="almaty">Алматы</option>
+                  <option value="shymkent">Шымкент</option>
+                  <option value="aktau">Актау</option>
+                </select>
+              </form> 
+            </div>         
+        </nav>
+    </div>
+
+    <button id="menu-toggle" class="menu-toggle">☰</button>
+    <div id="side-menu" class="side-menu">
+        <ul>
+            <li><a href="10labka.html">Главная</a></li>
+            <li><a href="https://presso.kz/menu">Меню</a></li>
+            <li><a href="https://restoran.kz/coffee/90582-vanilla-na-kunaeva">О ресторане</a></li>
+            <li><a href="https://wa.me/77715565607">Контакты</a></li>
+            <input type="search" placeholder="Поиск...">
+            </div>
+        </ul>
+          </div>
+        <body>
+        
+            <script>
+           document.getElementById('menu-toggle').addEventListener('click', function () {
+    const sideMenu = document.getElementById('side-menu');
+    sideMenu.classList.toggle('open'); // Мәзірді ашу/жабу
+});
+
+// Мәзір жабылатын етіп сыртқы аумақты басқанда
+document.addEventListener('click', function (event) {
+    const sideMenu = document.getElementById('side-menu');
+    const menuToggle = document.getElementById('menu-toggle');
+    if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        sideMenu.classList.remove('open');
+    }
+});
+
+      </script>
+ </body>
+    </div>
+    </header>
+
+    <main>
+        
+        <section id="delivery">
+            <h2>Форма бронирования</h2>            
+            <form>
+                <input type="text" placeholder="Имя" required>
+                <input type="tel" placeholder="Мобильный телефон" required>
+                <input type="text" placeholder="Тип блюда" required>
+                <input type="number" placeholder="Количество порций" required>
+                <input type="date" placeholder="Дата забронирования" required>
+                <input type="time" placeholder="Время забронирования" required>
+                <input type="number" placeholder="Стол бронирования" required>
+                <input type="text" placeholder="Комментарий" required>
+                <p>Выберите способ получения:</p>
+                <label>
+                    <input type="radio" name="delivery" value="restaurant" required>В ресторане
+                </label>
+                <label>
+                    <input type="radio" name="delivery" value="takeaway">С собой
+                </label>
+                <button 
+                type="submit" a href="delivery.html">Забронировать</button>
+            </form>
+        </section>
+
+       
+        <section id="menu">
+            <h2>Наш меню</h2>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <img src="https://i.pinimg.com/originals/a4/a4/5d/a4a45df28e9ddd5baf31acf3c5fd42d4.jpg" alt="">
+                    <h3>Меню</h3>
+                    <a href="https://presso.kz/menu">Подробнее</a>
+                </div>
+                <div class="flex-item">
+                    <img src="https://yocatering.ru/wa-data/public/shop/products/00/04/400/images/415/415.970.jpg" alt="Десерт">
+                    <h3>Десерты</h3>
+                    <a href="https://restoran.kz/dishes/deserty">Подробнее</a>
+                </div>
+                <div class="flex-item">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/fd80be88541165.5dd959f11c22a.jpg" alt="Салат">
+                    <h3>Напитки</h3>
+                    <a href="https://tanukifamily.kz/tanuki_kz/almaty/napitki/?utm_referrer=https%3A%2F%2Fwww.google.com%2F">Подробнее</a>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="gallery">
+            <h2>Фото самых популярных блюд в ресторане</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="https://get.wallhere.com/photo/food-pizza-cheese-tomatoes-olives-1739499.jpg" alt="Пицца">
+                    <p>Пицца</p>
+                        <p>Состав:</p>
+                        <ul>
+                        <li class="marker-text">Пицца маргарита – в начинку входят томаты, сыр, базилик.</li>
+                        <li class="marker-text">Пицаа Гавайская – готовится с сыром, перцем, ветчиной, ананасами.</li>
+                        <li class="marker-text">Пицца гицилийская – для начинки подойдут томаты, моцарелла, анчоусы.</li>
+                        <li class="marker-text">Пицца дьябло – с грибами, сыром, колбасками, перцем чили, томатами.</li>
+                        <li class="marker-text">Пицца неаполитанская – с тестом на молоке и дрожжах.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <img src="https://i.pinimg.com/736x/66/e0/3f/66e03f072ee1fd9c542f9b0d9157dbdf.jpg" alt="Бургер">
+                    <p>Бургер</p>
+                    <p>Состав:</p>
+                    <ul>
+                        <li class="marker-text">"Классический" бургер-Фарш мясной,сыр,помидор,соленый огурцы,салатные листья,соусы.</li>
+                        <li class="marker-text">"Говяжий" бургер – Фарш говяжий,помидор,маринованные огурцы,пдавленный сыр,салатные листья,соус по вкусу.</li>
+                        <li class="marker-text">"Куринный" бургер – Фарш куринный,помидор,маринованные огурцы,листья салата,лук,соусы по вкусу.</li>
+                        </ul>
+                </div>
+                <div class="grid-item">
+                    <img src="https://avatars.mds.yandex.net/i?id=3b19b0f9c10f20cf9ded5918f00dbff3_l-5232818-images-thumbs&n=13" alt="Салат">
+                    <p>Салат</p>
+                    <p>Состав:</p>
+                    <ul>
+                        <li class="marker-text">"Цезарь" салат- Романо салат, куриное филе, пармезан, крутончики, помидоры, майонез.</li>
+                        <li class="marker-text">"Греческий" салат- Огурцы, помидоры, оливки, фета, болгарский перец, лук, оливковое масло, лимонный сок.</li>
+                        <li class="marker-text">"Капрезе"- Моцарелла, помидоры, базилик, оливковое масло, бальзамический уксус.</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <img src="https://cdn-m.sport24.ru/m/b627/fdc8/a896/4ac4/8690/f046/4460/f7c9/1600_10000_max.jpeg" alt="Паста">
+                    <p>Паста</p>
+                    <p>Состав:</p>
+                    <ul>
+                        <li class="marker-text">Паста с соусом "карбонара"- Спагетти, бекон, яйца, пармезан, сливки, чеснок.</li>
+                        <li class="marker-text">Паста с соусом "песто"- Спагетти, базилик, оливковое масло, чеснок, кедровые орехи, пармезан.</li>
+                        <li class="marker-text">Паста с "томатным" соусом- Спагетти, томаты, чеснок, оливковое масло, базилик, пармезан.</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <img src="https://avatars.mds.yandex.net/i?id=5e70fc2026de2144cf86331589c903d3_l-3924219-images-thumbs&n=13" alt="Суши">
+                    <p>Суши</p>
+                    <p>Состав:</p>
+                    <ul>
+                        <li class="marker-text">Суши с "лососем"- Рис, нори, лосось, авокадо, огурец, соевый соус, васаби.</li>
+                        <li class="marker-text">"Филадельфия" суши- Рис, нори, лосось, крем-сыр, огурец, авокадо.</li>
+                        <li class="marker-text">Нигири с "тунцом"- Рис, нори, тунец, васаби.</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <img src="https://avatars.mds.yandex.net/i?id=9e248f9f8e5b1b49cea1a878054c1093_l-4248389-images-thumbs&n=13" alt="Торт">
+                    <p>Торт</p>
+                    <p>Состав:</p>
+                    <ul>
+                        <li class="marker-text">Торт "Наполеон"- Слоеное тесто, заварной крем, сахар, ваниль.</li>
+                        <li class="marker-text">Торт "Медовик"- Медовый корж, сметанный крем, орехи, сахар.</li>
+                        <li class="marker-text">Торт "Шоколадный"- Шоколадный бисквит, шоколадный крем, какао, сахар.</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <img src="https://i9.photo.2gis.com/images/branch/46/6473924505665422_85e3.jpg" alt="Шашлык">
+                    <p>Шашлык</p>
+                    <p>Состав:</p>
+                    <ul>
+                        <li class="marker-text">Шашлык из "баранины"- Баранина, лук, специи, зелень, соевый соус.</li>
+                        <li class="marker-text">Шашлык из "курицы"- Куриное филе, паприка, чеснок, лимон, оливковое масло.</li>
+                        <li class="marker-text">Шашлык из "говядины"- Говядина, горчица, мед, соевый соус, лук.</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <img src="https://i.pinimg.com/736x/f6/79/b2/f679b2fdeb3786b5ed3516424fdc3d17.jpg" alt="Сорпа">
+                    <p>Суп</p>
+                    <p>Состав:</p>
+                    <ul>
+                        <li class="marker-text">Суп "Борщ"- Свекла, картофель, капуста, морковь, лук, помидоры, мясо, чеснок.</li>
+                        <li class="marker-text">Суп "Щи"- Капуста, картофель, морковь, лук, специи, мясо.</li>
+                        <li class="marker-text">Суп "Грибной"- Грибы, картофель, морковь, лук, сливки, зелень.</li>
+                    </ul>
+                </div>
+                <div class="grid-item">
+                    <img src="https://api.serke.org/uploads/f4a6e5c526d74089b07c43d56b414df8.jpg" alt="Плов">
+                    <p>Плов</p>
+                    <p>Состав:</p>
+                    <ul>
+                        <li class="marker-text">Плов с "говядиной"- Рис, говядина, морковь, лук, чеснок, зира, барбарис.</li>
+                        <li class="marker-text">Плов с "курицей"- Рис, куриное мясо, морковь, лук, чеснок, куркума, зира.</li>
+                        <li class="marker-text">Плов с "бараниной"- Рис, баранина, морковь, лук, чеснок, зира, барбарис.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Связь</h2>
+            <p>Связаться с нами: +7 (771) 556-56-07.</p>
+            <p>Адрес: г.Алматы, ул.Абылай хана, 58.</p>
+            <p>Чувствуй себя счастливым с нами.</p>
+            <p>С тобой "Vanilla Lounge".</p>
+
+
+
+<div class="progress-bar">
+    <div class="progress progress-1"></div>
+</div>
+<div class="progress-bar">
+    <div class="progress progress-2"></div>
+</div>
+<div class="progress-bar">
+    <div class="progress progress-3"></div>
+</div>
+<div class="progress-bar">
+    <div class="progress progress-4"></div>
+</div>
+<div class="progress-bar">
+    <div class="progress progress-5"></div>
+</div>
+    </section>
+
+    <script>
+        const progressBars = document.querySelectorAll('.progress');   
+        progressBars.forEach(progressBar => {
+          progressBar.addEventListener('mouseover', () => {
+            progressBar.style.animationPlayState = 'paused';
+          });
+          
+          progressBar.addEventListener('mouseout', () => {
+    
+            progressBar.style.animationPlayState = 'running';
+          });
+        });
+      </script>
+  <footer>
+    <p>&copy; 2024 Vanilla Lounge. Все права защищены. Этот сайт предназначен только для использования в ресторанах.</p>
+    <div class="share-container">
+        <button class="share-button">
+            <i class="fas fa-share-alt"></i> <!-- Share icon (Font Awesome) -->
+        </button>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        document.querySelector('.share-button').addEventListener('click', function() {
+            // Toggle the "active" class to show/hide the social media icons
+            document.querySelector('.share-container').classList.toggle('active');
+        });
+    </script>
+ 
+</footer>
+</body>
+</html>
